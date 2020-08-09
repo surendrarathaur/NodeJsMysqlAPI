@@ -1,0 +1,120 @@
+ 1) Add User Api :
+    url : http://localhost:3000/user/add
+    method: POST
+    body: {
+        "name": "Arpit",
+        "email": "Arpit@gmail.com",
+        "password": "Test1234",
+        "address": "Ahmedabad",
+        "phone": 1234567899,
+        "mobile": 1234567899
+    }
+    response: {
+        "success": 1,
+        "userid": 6,
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiZmllbGRDb3VudCI6MCwiYWZmZWN0ZWRSb3dzIjoxLCJpbnNlcnRJZCI6Niwic2VydmVyU3RhdHVzIjoyLCJ3YXJuaW5nQ291bnQiOjEsIm1lc3NhZ2UiOiIiLCJwcm90b2NvbDQxIjp0cnVlLCJjaGFuZ2VkUm93cyI6MH0sImlhdCI6MTU5Njk2NzE2OSwiZXhwIjoxNTk2OTcwNzY5fQ.sW-9T0WMpUjnCRUoffh6HOshKzB4e5TGGSYcj1S5rqk"
+    }
+
+ 2) EDIT GET User Api:
+    url : http://localhost:3000/user/edit/6
+    method: GET,
+    header: "Bearer Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiZmllbGRDb3VudCI6MCwiYWZmZWN0ZWRSb3dzIjoxLCJpbnNlcnRJZCI6Niwic2VydmVyU3RhdHVzIjoyLCJ3YXJuaW5nQ291bnQiOjEsIm1lc3NhZ2UiOiIiLCJwcm90b2NvbDQxIjp0cnVlLCJjaGFuZ2VkUm93cyI6MH0sImlhdCI6MTU5Njk2NzE2OSwiZXhwIjoxNTk2OTcwNzY5fQ.sW-9T0WMpUjnCRUoffh6HOshKzB4e5TGGSYcj1S5rqk",
+    response: {
+        "userid": 6,
+        "name": "Arpit1",
+        "email": "Arpit1@gmail.com",
+        "password": "$2b$10$gYlLoClB3BIIlHKZQG/8FebGodNRlueenPehc5z9NegpObb5rzp3W",
+        "address": "Ahmedabad",
+        "phone": 1234567899,
+        "mobile": 1234567899,
+        "create_dated": "2020-08-09T10:05:06.000Z",
+        "update_dated": "0000-00-00 00:00:00"
+    }
+
+ 3) Update User Api:
+    url : http://localhost:3000/user/update/6
+    method: POST,
+    header: "Bearer Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiZmllbGRDb3VudCI6MCwiYWZmZWN0ZWRSb3dzIjoxLCJpbnNlcnRJZCI6Niwic2VydmVyU3RhdHVzIjoyLCJ3YXJuaW5nQ291bnQiOjEsIm1lc3NhZ2UiOiIiLCJwcm90b2NvbDQxIjp0cnVlLCJjaGFuZ2VkUm93cyI6MH0sImlhdCI6MTU5Njk2NzE2OSwiZXhwIjoxNTk2OTcwNzY5fQ.sW-9T0WMpUjnCRUoffh6HOshKzB4e5TGGSYcj1S5rqk",
+    body: {
+        "name": "Arpit1",
+        "email": "Arpit1@gmail.com",
+        "password": "Test1234",
+        "address": "Ahmedabad",
+        "phone": 1234567899,
+        "mobile": 1234567899
+    },
+    response: {
+        "fieldCount": 0,
+        "affectedRows": 1,
+        "insertId": 0,
+        "serverStatus": 2,
+        "warningCount": 0,
+        "message": "(Rows matched: 1  Changed: 1  Warnings: 0",
+        "protocol41": true,
+        "changedRows": 1
+    }
+
+ 4) Delete User Api:
+    url : http://localhost:3000/user/delete/6
+    method: GET,
+    header: "Bearer Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiZmllbGRDb3VudCI6MCwiYWZmZWN0ZWRSb3dzIjoxLCJpbnNlcnRJZCI6Niwic2VydmVyU3RhdHVzIjoyLCJ3YXJuaW5nQ291bnQiOjEsIm1lc3NhZ2UiOiIiLCJwcm90b2NvbDQxIjp0cnVlLCJjaGFuZ2VkUm93cyI6MH0sImlhdCI6MTU5Njk2NzE2OSwiZXhwIjoxNTk2OTcwNzY5fQ.sW-9T0WMpUjnCRUoffh6HOshKzB4e5TGGSYcj1S5rqk",
+    response: {
+        "fieldCount": 0,
+        "affectedRows": 1,
+        "insertId": 0,
+        "serverStatus": 2,
+        "warningCount": 0,
+        "message": "",
+        "protocol41": true,
+        "changedRows": 0
+    }
+
+5) ALL GET USer API:
+    url : http://localhost:3000/user
+    method: GET,
+    response:{
+        {
+            "userid": 2,
+            "name": "ravi",
+            "email": "ravi@gmail.com",
+            "password": "$2b$10$E5.Wm1e1j2WBUM4Tu4svVeS43YlgRlaujveSGidZGlc6M0aO2G00y",
+            "address": "Ahmedabad",
+            "phone": 1234567899,
+            "mobile": 1234567899,
+            "create_dated": "2020-08-09T08:08:48.000Z",
+            "update_dated": "0000-00-00 00:00:00"
+        },
+        {
+            "userid": 3,
+            "name": "surendra",
+            "email": "surendra@gmail.com",
+            "password": "$2b$10$S2Jr11LNDgliYLV.T0hbq.tNd8zxvxUVHxqQXkcKV5WyngqJEl5KW",
+            "address": "Ahmedabad",
+            "phone": 1234567899,
+            "mobile": 1234567899,
+            "create_dated": "2020-08-09T09:11:29.000Z",
+            "update_dated": "0000-00-00 00:00:00"
+        },
+        {
+            "userid": 4,
+            "name": "ritu",
+            "email": "ritu@gmail.com",
+            "password": "$2b$10$GXrXdiqrOW9LyY4bGoeUv.p69xjJGIyISvTOXNpXtbhlEafGJgfOm",
+            "address": "Ahmedabad",
+            "phone": 1234567899,
+            "mobile": 1234567899,
+            "create_dated": "2020-08-09T09:14:38.000Z",
+            "update_dated": "0000-00-00 00:00:00"
+        },
+        {
+            "userid": 5,
+            "name": "sonal",
+            "email": "sonal@gmail.com",
+            "password": "$2b$10$rRpdevycq.eTk0U9bfDaBOF2VODDnByqCUM0GTCAPMTAtLTlo.P2y",
+            "address": "Ahmedabad",
+            "phone": 1234567899,
+            "mobile": 1234567899,
+            "create_dated": "2020-08-09T09:53:17.000Z",
+            "update_dated": "0000-00-00 00:00:00"
+        }
+    }
